@@ -1,0 +1,28 @@
+file = open("bucket-list.txt", "w")
+file.write("1. Buy a Sound Bar\n")
+file.write("2. Go to the beach\n")
+file.write("3. Get a new headphone\n")
+file.close()
+print("Bucket list saved to bucket-list.txt!")
+
+file = open("bucket-list.txt", "r")
+content= file.read()
+print("\n === My bucket List ===")
+print(content)
+file.close()
+
+file = open("bucket-list.txt", "r")
+lines = file.readlines()
+print(f"You have {len(lines)} items in your bucket list.")
+file.close()
+
+file = open("bucket-list.txt", "a")
+file.write("4. Get a new Graphics Card\n")
+file.write("5. Get more Vengence LFX CORSAIR DDR4 RAM\n")
+file.close()
+print("Added 2 new items to the bucket list!")
+
+file = open("bucket-list.txt", "r")
+print("\n === Updated Bucket list === ")
+print(file.read())
+file.close()
